@@ -1,0 +1,13 @@
+ASM = nasm
+ASMFLAGS = -f elf64
+LD = ld
+LDFLAGS = -s
+
+all: tower_asm
+
+tower_asm: tower_asm.asm
+	$(ASM) $(ASMFLAGS) -o tower_asm.o tower_asm.asm
+	$(LD) -o tower_asm tower_asm.o $(LDFLAGS)
+
+clean:
+	rm -f tower_asm.o tower_asm
