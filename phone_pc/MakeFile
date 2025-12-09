@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -O2 -Wall
+TARGET = phone
+
+all: $(TARGET)
+
+$(TARGET): phone.c
+	$(CC) $(CFLAGS) -o $(TARGET) phone.c
+
+clean:
+	rm -f $(TARGET)
