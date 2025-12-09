@@ -1,0 +1,11 @@
+.PHONY: all clean
+
+all:
+	$(MAKE) -C tower
+	$(MAKE) -C phone_pc
+	$(MAKE) -C asm_examples
+
+clean:
+	$(MAKE) -C tower clean
+	$(MAKE) -C phone_pc clean
+	$(MAKE) -C asm_examples clean

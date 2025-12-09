@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -O2 -Wall
+TARGET = tower
+
+all: $(TARGET)
+
+$(TARGET): tower.c
+	$(CC) $(CFLAGS) -o $(TARGET) tower.c
+
+clean:
+	rm -f $(TARGET)
